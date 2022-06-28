@@ -63,13 +63,12 @@ if __name__ == "__main__":
     basarili(LANG['LOGGED'])
 
     # İnstagram #
-    onemli(LANG['GETTING_STRING_SESSION'])
     username = soru(LANG['USERNAME'])
     if username.startswith('@'):
         hata('@ kullanmadan giriniz')
         exit()
     password = soru(LANG['PASSWORD'])
-    basarili(LANG['SUCCESS_STRING'])
+   
     
     baslangic = time()
 
