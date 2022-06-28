@@ -1,11 +1,7 @@
-from telethon.tl.functions.channels import EditPhotoRequest, CreateChannelRequest
 from .language import LANG, COUNTRY, LANGUAGE, TZ
-from telethon import TelegramClient, functions
-from telethon.sessions import StringSession
 from rich.prompt import Prompt, Confirm
 from asyncio import get_event_loop
 from lavan_installer import *
-from .astring import main
 from time import time
 from . import console
 from git import Repo
