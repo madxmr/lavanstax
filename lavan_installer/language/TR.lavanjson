@@ -1,0 +1,37 @@
+{
+    "__LAVANJSON__": true,
+    "LANGUAGE": "Türkçe",
+    "LANGCODE": "TR",
+    "AUTHOR": "Ber4tbey",
+    "STRINGS": {
+        "MAIN": {
+            "INVALID_KEY": "(!) API Key yanlış.",
+            "USERNAME":"(?) Kullanıcı adınızı yazınız:(@ olmadan):",
+            "PASSWORD":"(?) Şifrenizi yazınız:",
+            "HEROKU_KEY": "\n(?) Heroku API Keyinizi Yazınız: ",
+            "HEROKU_KEY_LOGIN": "(i) Heroku'ya giriş yapılıyor...",
+            "LOGGED": "(✓) Giriş başarılı!",
+            "CREATING_APP": "(i) Uygulama oluşturuluyor...",
+            "SUCCESS_APP": "(✓) Uygulama oluşturma başarılı!",
+            "DOWNLOADING": "(i) Lavanstax indiriliyor...",
+            "DOWNLOADED": "(✓) Lavanstax indirmesi başarılı!",
+            "DEPLOYING": "(i) Deploy işlemi başlatılıyor... (Bu İşlem Uzun Sürebilir)",
+            "WRITING_CONFIG": "(i) Veriler yazılıyor...",
+            "SUCCESS_CONFIG": "(✓) Veriler yazıldı!",
+            "OPENING_DYNO": "(i) Dyno açılıyor...",
+            "ERROR_DYNO": "(!) Dosyalar yüklenirken bir hata oluştu. Lütfen kodu tekrar yapıştırın.",
+            "OPENED_DYNO": "(✓) Dynolar açıldı!",
+            "SUCCESS_DEPLOY": "(✓) Deploy işlemi başarılı!",
+            "MOST_APP": "(!) Sanırım beşten fazla uygulamanız var. Yeni uygulama oluşturabilmek için bazılarını silmeniz gerekmekte.",
+            "ERROR": "Bir hata gerçekleşti! Hata:",
+            "POSTGRE": "(i) PostgreSql Yükleniyor...",
+            "SUCCESS_POSTGRE": "(✓) PostgreSql Yüklendi!",
+            "SEEYOU": "Görüşürüz!"
+    
+        }
+        
+      
+        
+    }
+    
+}
