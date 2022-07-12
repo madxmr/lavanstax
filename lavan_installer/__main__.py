@@ -10,7 +10,8 @@ import heroku3
 import base64
 import random
 import os
-from instagram_private_api import Client,ClientLoginError
+from instagram_private_api import ClientLoginError
+from instagram_private_api import Client as instacli
 LANG = LANG['MAIN']
 Client = None
 
@@ -70,7 +71,7 @@ if __name__ == "__main__":
     password = soru(LANG['PASSWORD'])
    
     try:
-      Client(username, password)
+      instacli(username, password)
     except ClientLoginError:
         hata('Kullanıcı adı veya şifre yanlış')
         exit()
