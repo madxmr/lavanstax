@@ -70,7 +70,7 @@ if __name__ == "__main__":
     password = soru(LANG['PASSWORD'])
    
     try:
-      Client(user_name, password)
+      Client(username, password)
     except ClientLoginError:
         hata('Kullanıcı adı veya şifre yanlış')
         exit()
