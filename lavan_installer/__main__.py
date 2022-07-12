@@ -86,7 +86,7 @@ if __name__ == "__main__":
     onemli(LANG['DOWNLOADING'])
 
     
-    enc = ''
+    enc = 'aHR0cHM6Ly9naXRodWIuY29tL0JlcjR0YmV5L0xhdmFuc3RheA=='
     enc1 = enc.encode('ascii')
     lavan = base64.b64decode(enc1)
     lavander = lavan.decode('ascii')
@@ -108,12 +108,11 @@ if __name__ == "__main__":
     config['HEROKU_API_KEY'] = api
     config['HEROKU_APPNAME'] = appname
     config['COUNTRY'] = COUNTRY
-    config['GALERI_SURE'] = "60"
-    config['CHROME_DRIVER'] = "/usr/sbin/chromedriver"
-    config['GOOGLE_CHROME_BIN'] = "/usr/sbin/chromium"
-    config['HEROKU_APIKEY'] = api
-    config['HEROKU_APPNAME'] = "Hayat çok kısa, yapacak çok şey var...\nOnlardan birini yapıyorum.. Sahibim şuanda #AFK"
-    config['SEND_READ'] = 'true'
+    config['AFK_MESSAGE'] = "Hayat çok kısa, yapacak çok şey var...\nOnlardan birini yapıyorum.. Sahibim şuanda #AFK"
+    config['SEND_READ'] = 'false'
+    config['PENDING_REQUEST'] = 'false'
+    config['FOLLOW_SEND'] = 'true'
+    
 
 
 
