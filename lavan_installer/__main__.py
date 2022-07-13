@@ -101,7 +101,7 @@ if __name__ == "__main__":
     onemli(LANG['WRITING_CONFIG'])
 
 
-    config['USER_NAME'] = username
+    config['USERNAME'] = username
     config['PASSWORD'] = password
     config['PREFIX'] = "."
     config['LANG'] = LANGUAGE
