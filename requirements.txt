@@ -3,3 +3,4 @@ bs4
 requests
 rich
 gitpython
+python-dotenv
