@@ -1,3 +1,6 @@
+from distutils.log import error
+from tkinter import E
+from traceback import print_tb
 from .language import LANG, COUNTRY, LANGUAGE, TZ
 from rich.prompt import Prompt, Confirm
 from asyncio import get_event_loop
@@ -10,8 +13,7 @@ import heroku3
 import base64
 import random
 import os
-from instagram_private_api import ClientLoginError
-from instagram_private_api import Client as instacli
+
 LANG = LANG['MAIN']
 Client = None
 
@@ -63,18 +65,30 @@ if __name__ == "__main__":
     heroku = connect(api)
     basarili(LANG['LOGGED'])
 
-    # İnstagram #
-    username = soru(LANG['USERNAME'])
-    if username.startswith('@'):
-        hata('@ kullanmadan giriniz')
-        exit()
-    password = soru(LANG['PASSWORD'])
    
+    #username = soru(LANG['USERNAME'])
+    #if username.startswith('@'):
+     #   hata('@ kullanmadan giriniz')
+      #  exit()
+    # password = soru(LANG['PASSWORD'])
+   
+    #try:
+     # instacli(username, password)
+    #except ClientLoginError:
+     #   hata('Kullanıcı adı veya şifre yanlış')
+      #  exit()
+
+ # İnstagram #
     try:
-      instacli(username, password)
-    except ClientLoginError:
-        hata('Kullanıcı adı veya şifre yanlış')
-        exit()
+       os.system('node str.js')
+       basarili(LANG['LOGGED'])
+    except:
+       hata("Bir hata oluştu!")
+       exit()
+    
+
+    
+       
 
     baslangic = time()
 
@@ -99,8 +113,8 @@ if __name__ == "__main__":
     config = app.config()
 
     onemli(LANG['WRITING_CONFIG'])
-
-
+    username = os.environ.get('username')
+    password = os.environ.get('password')
     config['USERNAME'] = username
     config['PASSWORD'] = password
     config['PREFIX'] = "."
