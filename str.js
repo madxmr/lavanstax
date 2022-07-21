@@ -1,8 +1,12 @@
-import readline from 'readline-sync'
 
+import readline from 'readline-sync'
+import chalk from 'chalk';
+import color from 'colors';
+import moment from 'moment';
 import {IgApiClient,IgLoginTwoFactorRequiredError,IgCheckpointError,IgLoginRequiredError,IgUserHasLoggedOutError} from 'instagram-private-api'
 import {existsSync, readFileSync, unlinkSync, writeFileSync, mkdirSync} from 'fs'
 import Bluebird from 'bluebird';
+import { PassThrough } from 'stream';
 import inquirer from 'inquirer';
 class StringSession {
     constructor() {
@@ -62,7 +66,7 @@ class StringSession {
                 message: `Enter code received via ${verificationMethod === '1' ? 'SMS' : 'TOTP'}`,
               },
             ]);
-            
+            console.log("Giriş yapılıyor")
             ig.account.twoFactorLogin({
               username,
               verificationCode: code,
@@ -70,27 +74,29 @@ class StringSession {
               verificationMethod, // '1' = SMS (default), '0' = TOTP (google auth for example)
               trustThisDevice: '1', // Can be omitted as '1' is used by default
             });
-            
+            console.log("Giriş başarılı")
+            console.log("STRİNG ALINIYOR")
             const serialized = await ig.state.serialize();
             delete serialized.constants
             var st = Session.createStringSession(serialized);
             var std = Buffer.from(st, 'base64').toString('utf-8');
-            
+            console.log(st)
+            console.log(std)
             writeFileSync(tokenPath, JSON.stringify(serialized))
             if (!existsSync('config.env')) {
-                writeFileSync('config.env', `username="${username}"\npassword="${password}"`);
-            }
+              writeFileSync('config.env', `username=${username}\npassword=${password}`);
+          }
           } 
           
           
         )
         
       }
-     
+   
       
       
       
-    
-     }
+
+      console.log(chalk.greenBright('Token successfully saved.'))}
     )
       ();
