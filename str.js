@@ -10,12 +10,12 @@ import inquirer from 'inquirer';
 
 (async()=>{
     
-    const username=readline.question("Enter your instagram username: ".blue);
-    const password=readline.question("Enter your instagram password: ".blue);
+    const username=readline.question("Enter your username".blue);
+    const password=readline.question("Enter your password".blue);
     const ig = new IgApiClient()
    
     ig.state.generateDevice(username);
-    writeFileSync('config.env', `username=${username}\npassword=${password}`);
+    writeFileSync('config.env', `user_name=${username}\npassword=${password}`);
  
 
   
