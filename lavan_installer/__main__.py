@@ -1,5 +1,5 @@
 from distutils.log import error
-from tkinter import E
+
 from traceback import print_tb
 from .language import LANG, COUNTRY, LANGUAGE, TZ
 from rich.prompt import Prompt, Confirm
