@@ -1,6 +1,3 @@
-from distutils.log import error
-
-from traceback import print_tb
 from .language import LANG, COUNTRY, LANGUAGE, TZ
 from rich.prompt import Prompt, Confirm
 from asyncio import get_event_loop
@@ -13,6 +10,8 @@ import heroku3
 import base64
 import random
 import os
+from dotenv import load_dotenv
+
 
 LANG = LANG['MAIN']
 Client = None
@@ -66,17 +65,7 @@ if __name__ == "__main__":
     basarili(LANG['LOGGED'])
 
    
-    #username = soru(LANG['USERNAME'])
-    #if username.startswith('@'):
-     #   hata('@ kullanmadan giriniz')
-      #  exit()
-    # password = soru(LANG['PASSWORD'])
-   
-    #try:
-     # instacli(username, password)
-    #except ClientLoginError:
-     #   hata('Kullanıcı adı veya şifre yanlış')
-      #  exit()
+
 
  # İnstagram #
     try:
@@ -111,9 +100,9 @@ if __name__ == "__main__":
     onemli(LANG['DEPLOYING'])
     app = hgit(heroku, repo, appname)
     config = app.config()
-
+    load_dotenv("config.env")
     onemli(LANG['WRITING_CONFIG'])
-    username = os.environ.get('username')
+    username = os.environ.get("user_name")
     password = os.environ.get('password')
     config['USERNAME'] = username
     config['PASSWORD'] = password
