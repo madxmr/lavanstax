@@ -109,7 +109,7 @@ if __name__ == "__main__":
     config['PREFIX'] = "."
     config['LANG'] = LANGUAGE
     config['HEROKU_API_KEY'] = api
-    config['HEROKU_APPNAME'] = appname
+    config['HEROKU_APP_NAME'] = appname
     config['COUNTRY'] = COUNTRY
     config['AFK_MESSAGE'] = "Hayat çok kısa, yapacak çok şey var...\nOnlardan birini yapıyorum.. Sahibim şuanda #AFK"
     config['SEND_READ'] = 'false'
